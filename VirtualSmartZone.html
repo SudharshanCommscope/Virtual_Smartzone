@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title & fav icon -->
+    <title>RUCKUS - Virtual Smart Zone</title>
+    <link rel="shortcut icon" href="/images/vSZ.jpg" type="image/x-icon">
+
+    <!-- bootstrap css & script links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="vSZ_style.css">
+</head>
+
+<body>
+    <div id="transperant" class="m-auto">
+        <form class="m-auto">
+            <img src="/images/RUCKUS.png" alt="RUCKUS Logo" class="img-fluid mb-4" style="width: 30%; left: 35% !important; position: relative;">
+            <h1 class="h1 text-center text-light mb-5">
+                Virtual SmartZone
+            </h1>
+            <div class="form-check d-flex">
+                <legend class="col-4">vSZ Model
+                    <img src="/images/vSZ-2.png" alt="Virtual Smart Zone" style="width: 20%;">
+                </legend>
+                <div class="form-group mt-1">
+                    <input class="hs" type="radio" name="modelRadios" id="highScale" checked>
+                    <label class="modelLabel mr-5" for="highScale">High Scale (vSZ-H)</label>
+                    <input class="es" type="radio" name="modelRadios" id="essentialScale">
+                    <label class="modelLabel" for="essentialScale">Essential Scale (vSZ-E)</label>
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label for="platform" class="col col-form-label ml-5">Platform</label>
+                <label for="ap" class="col col-form-label ml-4">No.of Access Points</label>
+                <label for="switch" class="col col-form-label ml-5">No.of Switches</label>
+            </div>
+            <div class="form-group row">
+                <select id="platform" class="form-control col mr-3">
+                    <option selected>Default</option>
+                    <option>VMware</option>
+                    <option>Microsoft Azure</option>
+                    <option>Google Cloud Platform</option>
+                    <option>Amazon Web Service</option>
+                    <option>Kernel-based Virtual Machine</option>
+                </select>
+
+                <div class="col">
+                    <input type="number" class="form-control" id="ap" placeholder="AP count">
+                </div>
+
+                <div class="col">
+                    <input type="number" class="form-control" id="switch" placeholder="Switch count">
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
