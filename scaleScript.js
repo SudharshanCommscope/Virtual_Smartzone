@@ -14,7 +14,7 @@ function validationScale() {
     var ap = div1.getElementsByTagName("input")[0].value;
     var switches = div1.getElementsByTagName("input")[1].value;
 
-    total = ap + (switches * 5);
+    total = parseInt(ap) + (parseInt(switches) * 5);
 
     var platformText = platform.options[platform.selectedIndex].text;
 
