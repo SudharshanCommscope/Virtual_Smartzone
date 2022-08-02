@@ -1,15 +1,14 @@
-
-var ap = document.getElementById("ap");
-
 var div0 = document.getElementById("transperant");
 var form = div0.getElementsByTagName("form")[0];
 var div1 = form.getElementsByTagName("div")[2];
 
 var total = 0;
+var string = "";
 
 var info = document.getElementById("info");
-
 var platform = document.getElementById("platform");
+
+info.innerHTML=string;
 
 function validationScale() {
     var ap = div1.getElementsByTagName("input")[0].value;
@@ -19,135 +18,148 @@ function validationScale() {
 
     var platformText = platform.options[platform.selectedIndex].text;
 
-    document.getElementsByClassName("card")[0].style.display = "block";
-    
     if ($("#highScale").prop("checked")) {
         if (platformText === "Default") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
+                string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
+                string = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
             }
             else if (total >= 501 && total <= 1000) {
-                info.innerHTML = "CPU : 4-6 \tRAM : 18GB\t Min.DiskSize : 150GB";
+                string = "CPU : 4-6 \tRAM : 18GB\t Min.DiskSize : 150GB";
             }
             else if (total >= 1001 && total <= 2500) {
-                info.innerHTML = "CPU : 6 \tRAM : 22GB\t Min.DiskSize : 300GB";
+                string = "CPU : 6 \tRAM : 22GB\t Min.DiskSize : 300GB";
             }
             else if (total >= 2501 && total <= 3000) {
-                info.innerHTML = "CPU : 8 \tRAM : 24GB\t Min.DiskSize : 300GB";
+                string = "CPU : 8 \tRAM : 24GB\t Min.DiskSize : 300GB";
             }
             else if (total >= 3001 && total <= 5000) {
-                info.innerHTML = "CPU : 12 \tRAM : 28GB\t Min.DiskSize : 300GB";
+                string = "CPU : 12 \tRAM : 28GB\t Min.DiskSize : 300GB";
             }
             else if (total >= 5001 && total <= 6000) {
-                info.innerHTML = "CPU : 16 \tRAM : 30GB\t Min.DiskSize : 300GB";
+                string = "CPU : 16 \tRAM : 30GB\t Min.DiskSize : 300GB";
             }
             else if (total >= 6001 && total <= 10000) {
-                info.innerHTML = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+                string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
             }
             else if (total >= 10001 && total <= 30000) {
-                info.innerHTML = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+                string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+            }
+            else{
+                string = "No data found";
             }
 
         } else if (platformText === "Microsoft Azure") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "DS11_v2 (2 vCPU/14GB RAM)orD4s_v3 (4 vCPU/16GB RAM)";
-
+                string = "DS11_v2 (2 vCPU/14GB RAM)orD4s_v3 (4 vCPU/16GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "D4s_v3 (4 vCPU/16GB RAM)";
-
+                string = "D4s_v3 (4 vCPU/16GB RAM)";
             }
             else if (total >= 501 && total <= 1000) {
-                info.innerHTML = "E4s_v3 (4 vCPU/32GB RAM)";
-
+                string = "E4s_v3 (4 vCPU/32GB RAM)";
             }
             else if (total >= 1001 && total <= 3000) {
-                info.innerHTML = "D8s_v3 (8 vCPU/32GB RAM)";
-
+                string = "D8s_v3 (8 vCPU/32GB RAM)";
             }
             else if (total >= 3001 && total <= 6000) {
-                info.innerHTML = "F16s_v2 (16 vCPU/32";
-
+                string = "F16s_v2 (16 vCPU/32GB RAM)";
             }
             else if (total >= 6001 && total <= 10000) {
-                info.innerHTML = "F32s_v2 (32 vCPU/64GB RAM)";
-
+                string = "F32s_v2 (32 vCPU/64GB RAM)";
             }
             else if (total >= 10001 && total <= 30000) {
-                info.innerHTML = "F32s_v2 (32 vCPU/64GB RAM)";
+                string = "F32s_v2 (32 vCPU/64GB RAM)";
+            }
+            else{
+                string = "No data found";
             }
 
         } else if (platformText === "Amazon Web Service") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "r5.large (2 vCPU/16 GB RAM)";
+                string = "r5.large (2 vCPU/16 GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "m5.xlarge (4 vCPU/16 GB RAM)";
+                string = "m5.xlarge (4 vCPU/16 GB RAM)";
             }
             else if (total >= 501 && total <= 1000) {
-                info.innerHTML = "r5.xlarge (4 vCPU/32GB RAM)";
+                string = "r5.xlarge (4 vCPU/32GB RAM)";
             }
             else if (total >= 1001 && total <= 3000) {
-                info.innerHTML = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
             }
             else if (total >= 3001 && total <= 6000) {
-                info.innerHTML = "c5.4xlarge (16 vCPU/32 GB RAM)";
+                string = "c5.4xlarge (16 vCPU/32 GB RAM)";
             }
             else if (total >= 6001 && total <= 10000) {
-                info.innerHTML = "c5.9xlarge (36 vCPU/72 GB RAM)";
+                string = "c5.9xlarge (36 vCPU/72 GB RAM)";
             }
             else if (total >= 10001 && total <= 30000) {
-                info.innerHTML = "c5.9xlarge (36 vCPU/72 GB RAM)";
+                string = "c5.9xlarge (36 vCPU/72 GB RAM)";
             }
-
+            else{
+                string = "No data found";
+            }
         }
     } else {
         if (platformText === "Default") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
+                string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
+                string = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
             }
             else if (total >= 501 && total <= 1024) {
-                info.innerHTML = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
+                string = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
             }
             else if (total >= 1025 && total <= 3000) {
-                info.innerHTML = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
+                string = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
+            }
+            else{
+                string = "No data found";
             }
 
         } else if (platformText === "Microsoft Azure") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "DS11_v2 (2 vCPU/14 GB RAM) or D4s_v3 (4 vCPU/16 GB RAM)";
+                string = "DS11_v2 (2 vCPU/14 GB RAM) or D4s_v3 (4 vCPU/16 GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "D4s_v3 (4 vCPU/16 GB RAM)";
+                string = "D4s_v3 (4 vCPU/16 GB RAM)";
             }
             else if (total >= 501 && total <= 1024) {
-                info.innerHTML = "D8s_v3 (8 vCPU/32 GB RAM)";
+                string = "D8s_v3 (8 vCPU/32 GB RAM)";
             }
             else if (total >= 1025 && total <= 3000) {
-                info.innerHTML = "D8s_v3 (8 vCPU/32 GB RAM)";
+                string = "D8s_v3 (8 vCPU/32 GB RAM)";
             }
-
+            else{
+                string = "No data found";
+            }
         } else if (platformText === "Amazon Web Service") {
             if (total >= 1 && total <= 100) {
-                info.innerHTML = "r5.large (2 vCPU/16 GB RAM)";
+                string = "r5.large (2 vCPU/16 GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                info.innerHTML = "m5.xlarge (4 vCPU/16 GB RAM)";
+                string = "m5.xlarge (4 vCPU/16 GB RAM)";
             }
             else if (total >= 501 && total <= 1024) {
-                info.innerHTML = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
             }
             else if (total >= 1025 && total <= 3000) {
-                info.innerHTML = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
             }
-
+            else{
+                string = "No data found";
+            }
         }
+    }
 
+    display();
+
+    function display(){
+        document.getElementsByClassName("card")[0].style.display = "block";
+        info.innerHTML = string;
     }
 }
