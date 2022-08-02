@@ -2,9 +2,9 @@ body {
     background-color: black;
     min-height: 100vh;
     min-width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #transperant {
@@ -13,13 +13,14 @@ body {
     height: 35rem;
     padding: 2%;
     border-radius: 10px;
+    margin-top: 5rem !important;
 }
 
 form {
     width: 45rem;
 }
 
-.form-check{
+.form-check {
     font-size: 20px;
 }
 
@@ -28,15 +29,75 @@ legend {
     color: white;
 }
 
-.form-group{
+.form-group {
     font-size: 18px;
 }
 
-.btn{
+#smallDiv {
+    display: none;
+}
+
+.btn {
     width: 10rem;
     height: 3.5rem;
     background-color: black;
     color: white;
     font-size: 20px;
     border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    #transperant {
+        width: 80%;
+    }
+
+    .img-fluid {
+        left: 34% !important;
+    }
+
+    form {
+        width: 20rem;
+    }
+
+    legend {
+        font-size: medium;
+    }
+
+    .form-check {
+        font-size: 15px;
+    }
+
+    .form-group {
+        font-size: 13px;
+    }
+
+    #smallDiv input, select{
+        width: 70% !important;
+        margin-left: 2rem;
+    }
+
+    h1 {
+        font-size: large !important;
+    }
+
+    #bigDiv{
+        display: none;
+    }
+
+    #smallDiv{
+        display: block;
+    }
+
+    .btn{
+        width: max-content;
+    }
+
+    .mt-sm-0{
+        display: inline !important;
+        margin-left: 30%;
+    }
+
+    span{
+        display: inline !important;
+    }
 }
