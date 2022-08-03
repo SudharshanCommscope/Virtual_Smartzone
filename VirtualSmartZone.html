@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="vSZ_style.css">
 
     <style>
-        .card{
+        .card {
             display: none;
         }
     </style>
@@ -35,7 +35,8 @@
 
 <body>
     <div id="transperant" class="mx-auto my-2">
-        <form class="m-auto" onsubmit="return validationScale()">
+        <!-- <form class="m-auto" onsubmit="return validationScale()"> -->
+        <form action="#" method="get" class="m-auto" onclick="return validationScale()">
             <img src="images/RUCKUS.png" alt="RUCKUS Logo" class="img-fluid mb-4"
                 style="width: 30%; left: 35%; position: relative;">
             <h1 class="h1 text-center text-light mb-5">
@@ -55,6 +56,7 @@
                     <label class="modelLabel" for="essentialScale">Essential Scale (vSZ-E)</label>
                 </div>
             </div>
+
             <div id="bigDiv" class="container-fluid">
                 <div class="form-group row mt-3">
                     <label for="platform" class="col col-form-label ml-5">Platform</label>
@@ -64,11 +66,11 @@
                 <div class="form-group row">
                     <select id="platform" name="platform" class="form-control col mr-3">
                         <option selected>Default</option>
-                        <option>VMware</option>
+                        <!-- <option>VMware</option> -->
                         <option>Microsoft Azure</option>
-                        <option>Google Cloud Platform</option>
+                        <!-- <option>Google Cloud Platform</option> -->
                         <option>Amazon Web Service</option>
-                        <option>Kernel-based Virtual Machine</option>
+                        <!-- <option>Kernel-based Virtual Machine</option> -->
                     </select>
 
                     <div class="col">
@@ -88,11 +90,11 @@
                     <label for="smPlatform" class="col col-form-label ml-2">Platform</label>
                     <select id="smPlatform" class="form-control">
                         <option selected>Default</option>
-                        <option>VMware</option>
+                        <!-- <option>VMware</option> -->
                         <option>Microsoft Azure</option>
-                        <option>Google Cloud Platform</option>
+                        <!-- <option>Google Cloud Platform</option> -->
                         <option>Amazon Web Service</option>
-                        <option>Kernel-based Virtual Machine</option>
+                        <!-- <option>Kernel-based Virtual Machine</option> -->
                     </select>
                 </div>
                 <div id="" class="form-group">
@@ -121,7 +123,7 @@
     </div>
 
     <script src="scaleScript.js"></script>
-    
+
 </body>
 
 </html>

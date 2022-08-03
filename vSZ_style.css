@@ -71,7 +71,8 @@ legend {
         font-size: 13px;
     }
 
-    #smallDiv input, select{
+    #smallDiv input,
+    select {
         width: 70% !important;
         margin-left: 2rem;
     }
@@ -80,24 +81,24 @@ legend {
         font-size: large !important;
     }
 
-    #bigDiv{
+    #bigDiv {
         display: none;
     }
 
-    #smallDiv{
+    #smallDiv {
         display: block;
     }
 
-    .btn{
+    .btn {
         width: max-content;
     }
 
-    .mt-sm-0{
+    .mt-sm-0 {
         display: inline !important;
         margin-left: 30%;
     }
 
-    span{
+    span {
         display: inline !important;
     }
 }
