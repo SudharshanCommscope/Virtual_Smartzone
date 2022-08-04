@@ -18,30 +18,28 @@ function validationScale() {
         document.getElementById("para").innerHTML = "Ap Count Required";
         return false;
     }
-
-    // else {
-    //     total = parseInt(ap);
-    //     document.getElementById("para").innerHTML = "";
-    //     document.getElementsByClassName("fw-bold")[0].style.display = "none";
-    //     if (ap != "" && switches != "") {
-    //         total += (parseInt(switches) * 5);
-    //     }
-    // }
     else {
         total = parseInt(ap);
-        total += (parseInt(switches) * 5);
+        document.getElementById("para").innerHTML = "";
+        document.getElementsByClassName("fw-bold")[0].style.display = "none";
+        if (ap != "" && switches != "") {
+            total += (parseInt(switches) * 5);
+        }
+        else {
+            switches = "null";
+        }
     }
 
     var platformText = platform.options[platform.selectedIndex].text;
-    var card0 = document.getElementsByClassName("card")[0];
-    var card1 = card0.getElementsByClassName("card-body")[0];
-    var result = card1.getElementsByClassName("inputVal");
+
+    var result = document.getElementsByTagName("span");
     console.log(result);
-    result[1].innerHTML = platformText;
-    result[2].innerHTML = ap;
-    result[3].innerHTML = switches;
+    result[2].innerHTML = "Platform : " + platformText;
+    result[3].innerHTML = "Ap Count : " + ap;
+    result[4].innerHTML = "Switch Count : " + switches;
+
     if ($("#highScale").prop("checked")) {
-        result[0].innerHTML = "High Scale (vSZ-H)";
+        result[1].innerHTML = "vSZ Model : High Scale (vSZ-H)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
@@ -127,7 +125,7 @@ function validationScale() {
             }
         }
     } else {
-        result[0].innerHTML = "Essential Scale (vSZ-E)";
+        result[1].innerHTML = "vSZ Model : Essential Scale (vSZ-E)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
