@@ -42,138 +42,129 @@ function validationScale() {
         result[1].innerHTML = "vSZ Model : High Scale (vSZ-H)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
-                string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
+                string = "<br/>CPU : 2-4   RAM : 13GB   Min.DiskSize : 150GB";
             }
             else if (total >= 101 && total <= 500) {
-                string = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
+                string = "<br/>CPU : 4   RAM : 16GB   Min.DiskSize : 150GB";
             }
             else if (total >= 501 && total <= 1000) {
-                string = "CPU : 4-6 \tRAM : 18GB\t Min.DiskSize : 150GB";
+                string = "<br/>CPU : 4-6   RAM : 18GB   Min.DiskSize : 150GB";
             }
             else if (total >= 1001 && total <= 2500) {
-                string = "CPU : 6 \tRAM : 22GB\t Min.DiskSize : 300GB";
+                string = "<br/>CPU : 6   RAM : 22GB   Min.DiskSize : 300GB";
             }
             else if (total >= 2501 && total <= 3000) {
-                string = "CPU : 8 \tRAM : 24GB\t Min.DiskSize : 300GB";
+                string = "<br/>CPU : 8   RAM : 24GB   Min.DiskSize : 300GB";
             }
             else if (total >= 3001 && total <= 5000) {
-                string = "CPU : 12 \tRAM : 28GB\t Min.DiskSize : 300GB";
+                string = "<br/>CPU : 12   RAM : 28GB   Min.DiskSize : 300GB";
             }
             else if (total >= 5001 && total <= 6000) {
-                string = "CPU : 16 \tRAM : 30GB\t Min.DiskSize : 300GB";
+                string = "<br/>CPU : 16   RAM : 30GB   Min.DiskSize : 300GB";
             }
             else if (total >= 6001 && total <= 10000) {
-                string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+                string = "<br/>CPU : 24   RAM : 48GB   Min.DiskSize : 600GB";
             }
-            // else if (total >= 10001 && total <= 30000) {
-            //     string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
-            // }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
 
         } else if (platformText === "Microsoft Azure") {
             if (total >= 1 && total <= 100) {
-                string = "DS11_v2 (2 vCPU/14GB RAM)orD4s_v3 (4 vCPU/16GB RAM)";
+                string = "<br/>DS11_v2 (2 vCPU / 14GB RAM)<br />or<br/>D4s_v3 (4 vCPU / 16GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                string = "D4s_v3 (4 vCPU/16GB RAM)";
+                string = "<br/>D4s_v3 (4 vCPU / 16GB RAM)";
             }
             else if (total >= 501 && total <= 1000) {
-                string = "E4s_v3 (4 vCPU/32GB RAM)";
+                string = "<br/>E4s_v3 (4 vCPU / 32GB RAM)";
             }
             else if (total >= 1001 && total <= 3000) {
-                string = "D8s_v3 (8 vCPU/32GB RAM)";
+                string = "<br/>D8s_v3 (8 vCPU / 32GB RAM)";
             }
             else if (total >= 3001 && total <= 6000) {
-                string = "F16s_v2 (16 vCPU/32GB RAM)";
+                string = "<br/>F16s_v2 (16 vCPU / 32GB RAM)";
             }
             else if (total >= 6001 && total <= 10000) {
-                string = "F32s_v2 (32 vCPU/64GB RAM)";
+                string = "<br/>F32s_v2 (32 vCPU / 64GB RAM)";
             }
-            // else if (total >= 10001 && total <= 30000) {
-            //     string = "F32s_v2 (32 vCPU/64GB RAM)";
-            // }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
 
         } else if (platformText === "Amazon Web Service") {
             if (total >= 1 && total <= 100) {
-                string = "r5.large (2 vCPU/16 GB RAM)";
+                string = "<br/>r5.large (2 vCPU / 16GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                string = "m5.xlarge (4 vCPU/16 GB RAM)";
+                string = "<br/>m5.xlarge (4 vCPU / 16GB RAM)";
             }
             else if (total >= 501 && total <= 1000) {
-                string = "r5.xlarge (4 vCPU/32GB RAM)";
+                string = "<br/>r5.xlarge (4 vCPU / 32GB RAM)";
             }
             else if (total >= 1001 && total <= 3000) {
-                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "<br/>m5.2xlarge (8 vCPU / 32GB RAM)";
             }
             else if (total >= 3001 && total <= 6000) {
-                string = "c5.4xlarge (16 vCPU/32 GB RAM)";
+                string = "<br/>c5.4xlarge (16 vCPU / 32GB RAM)";
             }
             else if (total >= 6001 && total <= 10000) {
-                string = "c5.9xlarge (36 vCPU/72 GB RAM)";
+                string = "<br/>c5.9xlarge (36 vCPU / 72GB RAM)";
             }
-            // else if (total >= 10001 && total <= 30000) {
-            //     string = "c5.9xlarge (36 vCPU/72 GB RAM)";
-            // }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
         }
     } else {
         result[1].innerHTML = "vSZ Model : Essential Scale (vSZ-E)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
-                string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
+                string = "<br/>CPU : 2-4   RAM : 13GB   Min.DiskSize : 150GB";
             }
             else if (total >= 101 && total <= 500) {
-                string = "CPU : 4 \tRAM : 16GB\t Min.DiskSize : 150GB";
+                string = "<br/>CPU : 4   RAM : 16GB   Min.DiskSize : 150GB";
             }
             else if (total >= 501 && total <= 1024) {
-                string = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
+                string = "<br/>CPU : 8   RAM : 20GB   Min.DiskSize : 250GB";
             }
             else if (total >= 1025 && total <= 3000) {
-                string = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
+                string = "<br/>CPU : 8   RAM : 20GB   Min.DiskSize : 250GB";
             }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
 
         } else if (platformText === "Microsoft Azure") {
             if (total >= 1 && total <= 100) {
-                string = "DS11_v2 (2 vCPU/14 GB RAM) or D4s_v3 (4 vCPU/16 GB RAM)";
+                string = "<br/>DS11_v2 (2 vCPU / 14GB RAM)<br/>or<br />D4s_v3 (4 vCPU / 16GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                string = "D4s_v3 (4 vCPU/16 GB RAM)";
+                string = "<br/>D4s_v3 (4 vCPU / 16GB RAM)";
             }
             else if (total >= 501 && total <= 1024) {
-                string = "D8s_v3 (8 vCPU/32 GB RAM)";
+                string = "<br/>D8s_v3 (8 vCPU / 32GB RAM)";
             }
             else if (total >= 1025 && total <= 3000) {
-                string = "D8s_v3 (8 vCPU/32 GB RAM)";
+                string = "<br/>D8s_v3 (8 vCPU / 32GB RAM)";
             }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
         } else if (platformText === "Amazon Web Service") {
             if (total >= 1 && total <= 100) {
-                string = "r5.large (2 vCPU/16 GB RAM)";
+                string = "<br/>r5.large (2 vCPU / 16GB RAM)";
             }
             else if (total >= 101 && total <= 500) {
-                string = "m5.xlarge (4 vCPU/16 GB RAM)";
+                string = "<br/>m5.xlarge (4 vCPU / 16GB RAM)";
             }
             else if (total >= 501 && total <= 1024) {
-                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "<br/>m5.2xlarge (8 vCPU / 32GB RAM)";
             }
             else if (total >= 1025 && total <= 3000) {
-                string = "m5.2xlarge (8 vCPU/32 GB RAM)";
+                string = "<br/>m5.2xlarge (8 vCPU / 32GB RAM)";
             }
             else {
-                string = "No data found";
+                string = "<br/>No data found";
             }
         }
     }
@@ -182,7 +173,7 @@ function validationScale() {
 
     function display() {
         document.getElementsByClassName("card")[0].style.display = "block";
-        info.innerHTML += string;
+        info.innerHTML = "<b>Virtual SmartZone Minimum Requirements :</b>"+string;
     }
 
     document.getElementById("scaleForm").reset();
