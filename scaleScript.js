@@ -45,9 +45,9 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
-            }
+//             else if (total >= 10001 && total <= 30000) {
+//                 string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+//             }
             else{
                 string = "No data found";
             }
@@ -71,9 +71,9 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "F32s_v2 (32 vCPU/64GB RAM)";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "F32s_v2 (32 vCPU/64GB RAM)";
-            }
+//             else if (total >= 10001 && total <= 30000) {
+//                 string = "F32s_v2 (32 vCPU/64GB RAM)";
+//             }
             else{
                 string = "No data found";
             }
@@ -97,9 +97,9 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "c5.9xlarge (36 vCPU/72 GB RAM)";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "c5.9xlarge (36 vCPU/72 GB RAM)";
-            }
+//             else if (total >= 10001 && total <= 30000) {
+//                 string = "c5.9xlarge (36 vCPU/72 GB RAM)";
+//             }
             else{
                 string = "No data found";
             }
