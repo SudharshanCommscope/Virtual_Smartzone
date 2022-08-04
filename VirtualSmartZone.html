@@ -35,8 +35,7 @@
 
 <body>
     <div id="transperant" class="mx-auto my-2">
-        <!-- <form class="m-auto" onsubmit="return validationScale()"> -->
-        <form action="#" method="get" class="m-auto" onclick="return validationScale()">
+        <form action="#" method="get" class="m-auto" id=scaleForm>
             <img src="images/RUCKUS.png" alt="RUCKUS Logo" class="img-fluid mb-4"
                 style="width: 30%; left: 35%; position: relative;">
             <h1 class="h1 text-center text-light mb-5">
@@ -110,7 +109,7 @@
             </div>
             <div class="mt-xl-5 mt-md-3 mt-sm-0"
                 style="align-items: center; justify-content: center; width: inherit; display: flex;">
-                <button type="button" class="btn">Submit</button>
+                <button type="button" class="btn" onclick="return validationScale()">Submit</button>
             </div>
         </form>
     </div>
