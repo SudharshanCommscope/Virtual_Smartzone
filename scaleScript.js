@@ -8,18 +8,40 @@ var string = "";
 var info = document.getElementById("info");
 var platform = document.getElementById("platform");
 
-info.innerHTML=string;
+info.innerHTML = string;
 
 function validationScale() {
     var ap = div1.getElementsByTagName("input")[0].value;
     var switches = div1.getElementsByTagName("input")[1].value;
+    if (ap == "") {
+        document.getElementsByClassName("fw-bold")[0].style.display = "block";
+        document.getElementById("para").innerHTML = "Ap Count Required";
+        return false;
+    }
 
-    total = parseInt(ap);
-    total += (parseInt(switches) * 5);
+    // else {
+    //     total = parseInt(ap);
+    //     document.getElementById("para").innerHTML = "";
+    //     document.getElementsByClassName("fw-bold")[0].style.display = "none";
+    //     if (ap != "" && switches != "") {
+    //         total += (parseInt(switches) * 5);
+    //     }
+    // }
+    else {
+        total = parseInt(ap);
+        total += (parseInt(switches) * 5);
+    }
 
     var platformText = platform.options[platform.selectedIndex].text;
-
+    var card0 = document.getElementsByClassName("card")[0];
+    var card1 = card0.getElementsByClassName("card-body")[0];
+    var result = card1.getElementsByClassName("inputVal");
+    console.log(result);
+    result[1].innerHTML = platformText;
+    result[2].innerHTML = ap;
+    result[3].innerHTML = switches;
     if ($("#highScale").prop("checked")) {
+        result[0].innerHTML = "High Scale (vSZ-H)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
@@ -45,10 +67,10 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
-            }
-            else{
+            // else if (total >= 10001 && total <= 30000) {
+            //     string = "CPU : 24 \tRAM : 48GB\t Min.DiskSize : 600GB";
+            // }
+            else {
                 string = "No data found";
             }
 
@@ -71,10 +93,10 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "F32s_v2 (32 vCPU/64GB RAM)";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "F32s_v2 (32 vCPU/64GB RAM)";
-            }
-            else{
+            // else if (total >= 10001 && total <= 30000) {
+            //     string = "F32s_v2 (32 vCPU/64GB RAM)";
+            // }
+            else {
                 string = "No data found";
             }
 
@@ -97,14 +119,15 @@ function validationScale() {
             else if (total >= 6001 && total <= 10000) {
                 string = "c5.9xlarge (36 vCPU/72 GB RAM)";
             }
-            else if (total >= 10001 && total <= 30000) {
-                string = "c5.9xlarge (36 vCPU/72 GB RAM)";
-            }
-            else{
+            // else if (total >= 10001 && total <= 30000) {
+            //     string = "c5.9xlarge (36 vCPU/72 GB RAM)";
+            // }
+            else {
                 string = "No data found";
             }
         }
     } else {
+        result[0].innerHTML = "Essential Scale (vSZ-E)";
         if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
@@ -118,7 +141,7 @@ function validationScale() {
             else if (total >= 1025 && total <= 3000) {
                 string = "CPU : 8 \tRAM : 20GB\t Min.DiskSize : 250GB";
             }
-            else{
+            else {
                 string = "No data found";
             }
 
@@ -135,7 +158,7 @@ function validationScale() {
             else if (total >= 1025 && total <= 3000) {
                 string = "D8s_v3 (8 vCPU/32 GB RAM)";
             }
-            else{
+            else {
                 string = "No data found";
             }
         } else if (platformText === "Amazon Web Service") {
@@ -151,7 +174,7 @@ function validationScale() {
             else if (total >= 1025 && total <= 3000) {
                 string = "m5.2xlarge (8 vCPU/32 GB RAM)";
             }
-            else{
+            else {
                 string = "No data found";
             }
         }
@@ -159,10 +182,10 @@ function validationScale() {
 
     display();
 
-    function display(){
+    function display() {
         document.getElementsByClassName("card")[0].style.display = "block";
-        info.innerHTML = string;
+        info.innerHTML += string;
     }
-    
+
     document.getElementById("scaleForm").reset();
 }
