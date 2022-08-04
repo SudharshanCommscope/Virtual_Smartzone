@@ -20,7 +20,7 @@ function validationScale() {
     var platformText = platform.options[platform.selectedIndex].text;
 
     if ($("#highScale").prop("checked")) {
-        if (platformText === "Default") {
+        if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
             }
@@ -105,7 +105,7 @@ function validationScale() {
             }
         }
     } else {
-        if (platformText === "Default") {
+        if (platformText === "VMware/Hyper-V/KVM") {
             if (total >= 1 && total <= 100) {
                 string = "CPU : 2-4 \tRAM : 13GB\t Min.DiskSize : 150GB";
             }
