@@ -6,13 +6,22 @@ var total = 0;
 var string = "";
 
 var info = document.getElementById("info");
+info.innerHTML = string;
+
 var platform = document.getElementById("platform");
 
-info.innerHTML = string;
+if(window.innerWidth<=650){
+    platform = document.getElementById("smPlatform");
+    div1=form.getElementsByTagName("div")[7];
+}
+
+console.log(platform);
+console.log(div1);
 
 function validationScale() {
     var ap = div1.getElementsByTagName("input")[0].value;
     var switches = div1.getElementsByTagName("input")[1].value;
+
     if (ap == "") {
         document.getElementsByClassName("fw-bold")[0].style.display = "block";
         document.getElementById("para").innerHTML = "Ap Count Required";
