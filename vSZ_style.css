@@ -68,7 +68,7 @@ b {
     width: 100%;
 }
 
-@media (min-width: 600px) and (max-device-width: 768px) {
+@media only screen and (max-width: 600px) {
     #transperant {
         width: 80%;
     }
