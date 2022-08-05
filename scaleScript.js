@@ -136,9 +136,6 @@ function validationScale() {
             else if (total >= 501 && total <= 1024) {
                 string = "<br/>CPU : 8   RAM : 20GB   Min.DiskSize : 250GB";
             }
-            else if (total >= 1025 && total <= 3000) {
-                string = "<br/>CPU : 8   RAM : 20GB   Min.DiskSize : 250GB";
-            }
             else {
                 string = "<br/>No data found";
             }
@@ -153,9 +150,6 @@ function validationScale() {
             else if (total >= 501 && total <= 1024) {
                 string = "<br/>D8s_v3 (8 vCPU / 32GB RAM)";
             }
-            else if (total >= 1025 && total <= 3000) {
-                string = "<br/>D8s_v3 (8 vCPU / 32GB RAM)";
-            }
             else {
                 string = "<br/>No data found";
             }
@@ -167,9 +161,6 @@ function validationScale() {
                 string = "<br/>m5.xlarge (4 vCPU / 16GB RAM)";
             }
             else if (total >= 501 && total <= 1024) {
-                string = "<br/>m5.2xlarge (8 vCPU / 32GB RAM)";
-            }
-            else if (total >= 1025 && total <= 3000) {
                 string = "<br/>m5.2xlarge (8 vCPU / 32GB RAM)";
             }
             else {
