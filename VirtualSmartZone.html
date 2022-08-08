@@ -33,8 +33,9 @@
             box-shadow: rgba(255, 255, 255, 0.847) 0px 0px 25px;
         }
 
-        .fw-bold {
-            display: none;
+        td,th{
+            text-align: center;
+            vertical-align: middle !important;
         }
     </style>
 </head>
@@ -71,11 +72,8 @@
                 <div class="form-group row">
                     <select id="platform" name="platform" class="form-control col mr-3">
                         <option selected>VMware/Hyper-V/KVM</option>
-                        <!-- <option>VMware</option> -->
                         <option>Microsoft Azure</option>
-                        <!-- <option>Google Cloud Platform</option> -->
                         <option>Amazon Web Service</option>
-                        <!-- <option>Kernel-based Virtual Machine</option> -->
                     </select>
 
                     <div class="col">
@@ -95,11 +93,8 @@
                     <label for="smPlatform" class="col col-form-label ml-2">Platform</label>
                     <select id="smPlatform" class="form-control">
                         <option selected>VMware/Hyper-V/KVM</option>
-                        <!-- <option>VMware</option> -->
                         <option>Microsoft Azure</option>
-                        <!-- <option>Google Cloud Platform</option> -->
                         <option>Amazon Web Service</option>
-                        <!-- <option>Kernel-based Virtual Machine</option> -->
                     </select>
                 </div>
                 <div id="" class="form-group">
@@ -113,9 +108,7 @@
                         aria-describedby="switchesHelpsm" placeholder="Switch count (0-2000)">
                 </div>
             </div>
-            <div class="text-center text-danger fw-bold">
-                <p id="para"></p>
-            </div>
+
             <div class="mt-xl-5 mt-md-3 mt-sm-0"
                 style="align-items: center; justify-content: center; width: inherit; display: flex;">
                 <a href="#info">
@@ -127,12 +120,30 @@
 
     <br>
 
-    <div class="card w-50 m-auto text-center text-light" style="background-color: rgba(255, 255, 255, 0.271);">
+    <div class="card w-50 m-auto text-center text-light p-5" style="background-color: rgba(255, 255, 255, 0.271);">
         <span></span><br>
         <span></span><br>
         <span></span><br>
         <span></span><br>
         <div class="card-body" id="info"></div>
+        <table class="table bg-light rounded-lg">
+            <thead>
+                <tr>
+                    <th scope="col">Minimum vCPU</th>
+                    <th scope="col">Minimum RAM<sup>[1]</sup></th>
+                    <th scope="col">Minimum Disk Size<sup>[2]</sup></th>
+                    <th scope="col">Minimum IO Requirement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script src="scaleScript.js"></script>
